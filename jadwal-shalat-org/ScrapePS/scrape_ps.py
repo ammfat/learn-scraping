@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-class ScrapPS(object):
+class ScrapePS(object):
     def __init__(self, url='https://jadwalsholat.org/adzan/monthly.php?id=94'):
         """Initialize Class."""
         self.__url = url
@@ -91,6 +91,6 @@ class ScrapPS(object):
 
 
 if __name__ == "__main__":
-    scrap_ps = ScrapPS()
-    print(scrap_ps.get_pray_time())
-    print(scrap_ps.get_region_timezone())
+    scrape_ps = ScrapePS()
+    print(scrape_ps.get_pray_time())
+    print(scrape_ps.get_region_timezone())
