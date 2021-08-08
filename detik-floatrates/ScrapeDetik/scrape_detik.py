@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-class ScrapDetik(object):
+class ScrapeDetik(object):
     def __init__(self, url, params=None):
         self.__set_website_data(url, params)
         self.__set_popular_news()
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     url = 'https://www.detik.com/terpopuler'
     params = {'tag_from': 'wp_cb_mostPopular_more'}
     
-    sd = ScrapDetik(url, params)
+    sd = ScrapeDetik(url, params)
 
     print('\nVVVVVVVVVVVVVVVVVVVVVVVVVVV')
 

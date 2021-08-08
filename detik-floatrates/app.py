@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-from ScrapDetik import scrap_detik
-from ScrapFloatrates import scrap_floatrates
+from ScrapeDetik import scrape_detik
+from ScrapeFloatrates import scrape_floatrates
 
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def get_detik_data():
     url = 'https://www.detik.com/terpopuler'
     params = {'tag_from': 'wp_cb_mostPopular_more'}
     
-    sd = scrap_detik.ScrapDetik(url, params)
+    sd = scrape_detik.ScrapeDetik(url, params)
     data = { title : (url, image) for title, url, image in zip(sd.titles, sd.urls, sd.images) }
 
     return data
@@ -35,10 +35,10 @@ def get_detik_data():
 
 def get_floatrates_data():
     url = 'http://www.floatrates.com/daily/idr.json'
-    sfr = scrap_floatrates.ScrapFloatrates(url)
+    sfr = scrape_floatrates.ScrapeFloatrates(url)
 
     return sfr.get_json_data()
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

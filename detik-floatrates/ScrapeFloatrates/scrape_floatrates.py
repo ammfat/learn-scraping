@@ -1,6 +1,6 @@
 import requests
 
-class ScrapFloatrates(object):
+class ScrapeFloatrates(object):
     def __init__(self, url = 'http://www.floatrates.com/daily/idr.json'):
         self.__set_json_data(url)
 
@@ -20,7 +20,7 @@ class ScrapFloatrates(object):
 
 if __name__ == "__main__":
     url = 'http://www.floatrates.com/daily/idr.json'
-    sfr = ScrapFloatrates(url)
+    sfr = ScrapeFloatrates(url)
 
     print(sfr.get_response_status())
     print(sfr.get_json_data())
