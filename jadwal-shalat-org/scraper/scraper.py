@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class Scraper(object):
+class Scraper():
     """ Scraper class for scraping pray time data from jadwalsholat.org. """
 
     def __init__(self, url='https://jadwalsholat.org/adzan/monthly.php?id=94'):
